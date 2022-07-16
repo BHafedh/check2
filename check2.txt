@@ -1,0 +1,67 @@
+let vectors = [[8, 2, 2],[6, 0, 3], [6, 8, 0], [5, 2, 3], [3, 4 ,9], [0, 0, 0]]
+
+function dotProduct(vector1, vector2){
+    let result = 0;
+    for(let i = 0; i < vector1.length; i++){
+        result += vector1[i] * vector2[i]
+      }
+    return result
+  }
+  
+  for(let i = 0; i < vectors.length; i++){
+    for(let j = i + 1; j < vectors.length; j++){
+      if(dotProduct(vectors[i], vectors[j]) === 0){
+          console.log(`${vectors[i]} and ${vectors[j]} are orthogonal `)
+      }
+
+
+
+
+
+
+
+
+
+
+include <bits/stdc++.h>
+using namespace std;
+ 
+
+
+void insertionSort(int arr[], int n)
+{
+    int i, key, j;
+    for (i = 1; i < n; i++)
+    {
+        key = arr[i];
+      
+        
+        while (j >= 0 && arr[j] > key)
+        {
+            arr[j + 1] = arr[j];
+            j = j - 1;
+        }
+        arr[j + 1] = key;
+    }
+}
+ 
+
+void printArray(int arr[], int n)
+{
+    int i;
+    for (i = 0; i < n; i++)
+        cout << arr[i] << " ";
+    cout << endl;
+}
+ 
+
+int main()
+{
+    int arr[] = { 12, 11, 13, 5, 6 };
+    int N = sizeof(arr) / sizeof(arr[0]);
+ 
+    insertionSort(arr, N);
+    printArray(arr, N);
+ 
+    return 0;
+}
